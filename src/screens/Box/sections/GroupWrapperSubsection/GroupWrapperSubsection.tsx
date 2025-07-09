@@ -93,29 +93,29 @@ export const GroupWrapperSubsection = (): JSX.Element => {
   ];
 
   return (
-    <div className="w-full flex flex-col gap-6">
+    <div className="w-full flex flex-col gap-4">
       {/* Ambassador Card */}
-      <Card className="w-full border border-blue-200 shadow-sm overflow-hidden rounded-lg">
+      <Card className="w-full border-0 shadow-md overflow-hidden rounded-lg">
         <CardHeader className="p-0">
-          <div className="h-12 bg-blue-600 flex items-center justify-center">
-            <h2 className="font-bold text-white text-base text-center">
+          <div className="h-14 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center">
+            <h2 className="font-bold text-white text-lg text-center">
               Ambassador of India to Mexico
             </h2>
           </div>
         </CardHeader>
-        <CardContent className="p-4">
+        <CardContent className="p-6">
           <div className="flex flex-col items-center">
-            <Avatar className="w-16 h-16 shadow-md mb-3">
+            <Avatar className="w-20 h-20 shadow-lg mb-4">
               <AvatarImage src={ambassadorData.image} alt="Ambassador" />
               <AvatarFallback>PS</AvatarFallback>
             </Avatar>
-            <h3 className="font-bold text-blue-900 text-sm text-center mb-1">
+            <h3 className="font-bold text-blue-900 text-base text-center mb-2">
               {ambassadorData.name}
             </h3>
-            <p className="font-medium text-blue-700 text-xs text-center mb-3">
+            <p className="font-medium text-blue-700 text-sm text-center mb-4">
               {ambassadorData.title}
             </p>
-            <Button className="bg-blue-600 text-white text-xs h-7 px-3 rounded">
+            <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm h-9 px-6 rounded-lg shadow-md hover:shadow-lg">
               Profile
             </Button>
           </div>
@@ -123,30 +123,30 @@ export const GroupWrapperSubsection = (): JSX.Element => {
       </Card>
 
       {/* Quick Services Card */}
-      <Card className="w-full border border-green-200 shadow-sm overflow-hidden rounded-lg">
+      <Card className="w-full border-0 shadow-md overflow-hidden rounded-lg">
         <CardHeader className="p-0">
-          <div className="h-12 bg-green-600 flex items-center justify-center">
-            <h2 className="font-bold text-white text-base text-center">
+          <div className="h-14 bg-gradient-to-r from-green-600 to-teal-600 flex items-center justify-center">
+            <h2 className="font-bold text-white text-lg text-center">
               Quick Services
             </h2>
           </div>
         </CardHeader>
-        <CardContent className="p-3">
-          <div className="grid grid-cols-1 gap-2">
+        <CardContent className="p-4">
+          <div className="grid grid-cols-1 gap-3">
             {quickServices.map((service, index) => (
               <div
                 key={`service-${index}`}
-                className={`min-h-[60px] rounded border ${service.borderClass} ${service.bgClass} p-2 flex flex-col justify-center relative`}
+                className={`min-h-[70px] rounded-lg border ${service.borderClass} ${service.bgClass} p-3 flex flex-col justify-center relative shadow-sm`}
               >
                 <div
-                  className={`font-semibold ${service.textClass} text-xs text-center leading-tight`}
+                  className={`font-bold ${service.textClass} text-sm text-center leading-tight`}
                 >
                   {service.title}
                 </div>
 
                 {service.subtitle && (
                   <div
-                    className={`font-medium ${service.textClass} text-xs text-center opacity-80 mt-1`}
+                    className={`font-semibold ${service.textClass} text-xs text-center opacity-90 mt-1`}
                   >
                     {service.subtitle}
                   </div>
@@ -154,7 +154,7 @@ export const GroupWrapperSubsection = (): JSX.Element => {
 
                 {service.email && (
                   <div
-                    className={`${service.textClass} text-xs text-center mt-1`}
+                    className={`${service.textClass} text-sm text-center mt-1`}
                   >
                     <span className="font-bold">Email: </span>
                     <span>{service.email}</span>
@@ -163,7 +163,7 @@ export const GroupWrapperSubsection = (): JSX.Element => {
 
                 {service.contactNumber && (
                   <div
-                    className={`font-bold ${service.textClass} text-sm text-center mt-1`}
+                    className={`font-bold ${service.textClass} text-base text-center mt-1`}
                   >
                     {service.contactNumber}
                   </div>
@@ -171,7 +171,7 @@ export const GroupWrapperSubsection = (): JSX.Element => {
 
                 {service.note && (
                   <div
-                    className={`${service.textClass} text-xs text-center opacity-80 mt-1`}
+                    className={`${service.textClass} text-xs text-center opacity-85 mt-1`}
                   >
                     {service.note}
                   </div>
@@ -179,7 +179,7 @@ export const GroupWrapperSubsection = (): JSX.Element => {
 
                 {service.hasButton && (
                   <div
-                    className={`${service.buttonBgClass} rounded px-2 py-1 text-white text-xs font-semibold text-center mt-2 mx-auto`}
+                    className={`${service.buttonBgClass} rounded-lg px-3 py-2 text-white text-xs font-bold text-center mt-2 mx-auto shadow-md hover:shadow-lg cursor-pointer`}
                   >
                     {service.buttonText}
                   </div>
@@ -191,25 +191,25 @@ export const GroupWrapperSubsection = (): JSX.Element => {
       </Card>
 
       {/* Video Gallery Card */}
-      <Card className="w-full border border-orange-200 shadow-sm overflow-hidden rounded-lg">
+      <Card className="w-full border-0 shadow-md overflow-hidden rounded-lg">
         <CardHeader className="p-0">
-          <div className="h-12 bg-orange-500 flex items-center justify-center">
-            <h2 className="font-bold text-white text-base text-center">
+          <div className="h-14 bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center">
+            <h2 className="font-bold text-white text-lg text-center">
               Video Gallery
             </h2>
           </div>
         </CardHeader>
-        <CardContent className="p-3 flex flex-col gap-2">
+        <CardContent className="p-4 flex flex-col gap-3">
           {videoGalleryItems.map((item, index) => (
             <div
               key={`video-${index}`}
-              className="rounded border border-orange-200 bg-orange-50 p-2"
+              className="rounded-lg border border-orange-200 bg-gradient-to-br from-orange-50 to-orange-100 p-3 shadow-sm hover:shadow-md cursor-pointer"
             >
-              <p className="font-medium text-gray-700 text-xs leading-tight">{item}</p>
+              <p className="font-medium text-gray-800 text-sm leading-tight">{item}</p>
             </div>
           ))}
-          <div className="flex justify-center mt-2">
-            <Button className="bg-orange-500 text-white font-semibold rounded h-7 px-3 text-xs">
+          <div className="flex justify-center mt-3">
+            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-lg h-9 px-6 text-sm shadow-md hover:shadow-lg">
               View All
             </Button>
           </div>
@@ -217,38 +217,38 @@ export const GroupWrapperSubsection = (): JSX.Element => {
       </Card>
 
       {/* Important Updates Card */}
-      <Card className="w-full border border-orange-200 shadow-sm overflow-hidden rounded-lg">
+      <Card className="w-full border-0 shadow-md overflow-hidden rounded-lg">
         <CardHeader className="p-0">
-          <div className="h-12 bg-orange-500 flex items-center justify-center">
-            <h2 className="font-bold text-white text-base text-center">
+          <div className="h-14 bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center">
+            <h2 className="font-bold text-white text-lg text-center">
               Important Updates
             </h2>
           </div>
         </CardHeader>
-        <CardContent className="p-3 flex flex-col gap-2">
+        <CardContent className="p-4 flex flex-col gap-3">
           {importantUpdates.map((update, index) => (
             <div
               key={`update-${index}`}
-              className="rounded border border-orange-200 bg-orange-50 p-2"
+              className="rounded-lg border border-orange-200 bg-gradient-to-br from-orange-50 to-orange-100 p-3 shadow-sm hover:shadow-md cursor-pointer"
             >
-              <p className="font-medium text-gray-700 text-xs">{update}</p>
+              <p className="font-medium text-gray-800 text-sm">{update}</p>
             </div>
           ))}
         </CardContent>
       </Card>
 
       {/* Facebook Card */}
-      <Card className="w-full border border-blue-200 shadow-sm overflow-hidden rounded-lg">
+      <Card className="w-full border-0 shadow-md overflow-hidden rounded-lg">
         <CardHeader className="p-0">
-          <div className="h-12 bg-blue-600 flex items-center justify-center">
-            <h2 className="font-bold text-white text-base text-center">
+          <div className="h-14 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center">
+            <h2 className="font-bold text-white text-lg text-center">
               Facebook
             </h2>
           </div>
         </CardHeader>
-        <CardContent className="p-1 bg-gray-100">
+        <CardContent className="p-2 bg-gray-50">
           <img
-            className="w-full h-64 object-cover"
+            className="w-full h-72 object-cover rounded"
             alt="Facebook content"
             src="/image 1.png"
           />

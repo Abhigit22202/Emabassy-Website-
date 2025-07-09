@@ -75,41 +75,41 @@ export const DivWrapperSubsection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full flex flex-col gap-6">
+    <section className="w-full flex flex-col gap-4">
       {/* What's New Section */}
-      <Card className="w-full border border-green-200 rounded-lg overflow-hidden shadow-sm">
-        <div className="w-full h-12 bg-green-600">
+      <Card className="w-full border-0 rounded-lg overflow-hidden shadow-md">
+        <div className="w-full h-14 bg-gradient-to-r from-green-600 to-teal-600">
           <div className="flex items-center h-full px-4">
-            <h2 className="font-bold text-white text-lg">
+            <h2 className="font-bold text-white text-xl">
               What's New
             </h2>
           </div>
         </div>
 
-        <CardContent className="p-4">
-          <div className="flex flex-col gap-4">
+        <CardContent className="p-6">
+          <div className="flex flex-col gap-5">
             {whatsNewItems.map((item, index) => (
               <Card
                 key={`whats-new-${index}`}
-                className="w-full border border-blue-100 rounded-lg bg-blue-50"
+                className="w-full border border-blue-200 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100"
               >
-                <CardContent className="p-4">
-                  <div className="flex flex-col items-start gap-2">
-                    <div className="flex flex-wrap items-center gap-2 w-full">
+                <CardContent className="p-5">
+                  <div className="flex flex-col items-start gap-3">
+                    <div className="flex flex-wrap items-center gap-3 w-full">
                       <Badge
-                        className={`${item.badgeColor} rounded-full font-normal text-white text-xs`}
+                        className={`${item.badgeColor} rounded-full font-semibold text-white text-xs px-3 py-1`}
                       >
                         NEW
                       </Badge>
                     </div>
-                    <p className="font-normal text-blue-700 text-sm leading-relaxed">
+                    <p className="font-normal text-blue-800 text-sm leading-relaxed">
                       {item.content}
                     </p>
-                    <div className="flex items-center gap-1 pt-1">
-                      <span className="font-normal text-blue-600 text-sm">
+                    <div className="flex items-center gap-1 pt-2">
+                      <span className="font-medium text-blue-700 text-sm hover:text-blue-800 cursor-pointer">
                         Read more
                       </span>
-                      <span className="font-normal text-blue-600 text-sm">
+                      <span className="font-medium text-blue-700 text-sm">
                         →
                       </span>
                     </div>
@@ -118,8 +118,8 @@ export const DivWrapperSubsection = (): JSX.Element => {
               </Card>
             ))}
 
-            <div className="flex justify-center mt-2">
-              <Button className="bg-green-600 text-white font-bold text-sm h-9 px-6 rounded">
+            <div className="flex justify-center mt-4">
+              <Button className="bg-gradient-to-r from-green-600 to-teal-600 text-white font-bold text-sm h-10 px-8 rounded-lg shadow-md hover:shadow-lg">
                 View All
               </Button>
             </div>
@@ -128,22 +128,22 @@ export const DivWrapperSubsection = (): JSX.Element => {
       </Card>
 
       {/* Albums Section */}
-      <Card className="w-full rounded-lg overflow-hidden shadow-sm">
-        <div className="w-full h-12 bg-blue-600 flex items-center justify-between px-4">
-          <h2 className="font-bold text-white text-lg">
+      <Card className="w-full rounded-lg overflow-hidden shadow-md">
+        <div className="w-full h-14 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-between px-4">
+          <h2 className="font-bold text-white text-xl">
             Albums
           </h2>
         </div>
 
-        <CardContent className="p-4">
-          <div className="flex flex-col gap-4">
+        <CardContent className="p-6">
+          <div className="flex flex-col gap-5">
             {albumItems.map((album, index) => (
               <Card
                 key={`album-${index}`}
-                className="w-full rounded-lg border border-blue-100 bg-blue-50"
+                className="w-full rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100"
               >
-                <CardContent className="p-3 flex gap-3">
-                  <div className="w-32 h-24 rounded overflow-hidden flex-shrink-0">
+                <CardContent className="p-4 flex gap-4">
+                  <div className="w-40 h-28 rounded-lg overflow-hidden flex-shrink-0">
                     <img
                       className="w-full h-full object-cover"
                       alt={album.title}
@@ -151,13 +151,13 @@ export const DivWrapperSubsection = (): JSX.Element => {
                     />
                   </div>
                   <div className="flex-1 flex flex-col">
-                    <Badge className="w-fit bg-blue-600 rounded-full font-medium text-white text-xs mb-2">
+                    <Badge className="w-fit bg-blue-600 rounded-full font-semibold text-white text-xs px-3 py-1 mb-3">
                       {album.date}
                     </Badge>
-                    <h3 className="font-bold text-blue-900 text-sm leading-tight mb-auto">
+                    <h3 className="font-bold text-blue-900 text-base leading-tight mb-auto">
                       {album.title}
                     </h3>
-                    <p className="font-normal text-blue-600 text-sm mt-2">
+                    <p className="font-medium text-blue-700 text-sm mt-3 hover:text-blue-800 cursor-pointer">
                       View More
                     </p>
                   </div>
@@ -165,8 +165,8 @@ export const DivWrapperSubsection = (): JSX.Element => {
               </Card>
             ))}
 
-            <div className="flex justify-center mt-2">
-              <Button className="h-9 rounded bg-blue-600 text-white font-bold">
+            <div className="flex justify-center mt-4">
+              <Button className="h-10 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 shadow-md hover:shadow-lg">
                 View All News →
               </Button>
             </div>
@@ -175,14 +175,14 @@ export const DivWrapperSubsection = (): JSX.Element => {
       </Card>
 
       {/* Digital India Banner - Full Width */}
-      <Card className="w-full rounded-lg overflow-hidden shadow-sm">
+      <Card className="w-full rounded-lg overflow-hidden shadow-md">
         <CardContent className="p-0">
-          <div className="w-full h-32 bg-[url(/juGajmc1gOVBUtt5\ \(1\).jpg)] bg-cover bg-center relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/80 flex items-center justify-center">
+          <div className="w-full h-36 bg-[url(/juGajmc1gOVBUtt5\ \(1\).jpg)] bg-cover bg-center relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 to-purple-900/85 flex items-center justify-center">
               <div className="text-center text-white">
-                <h3 className="text-xl font-bold mb-2">10 YEARS OF DIGITAL INDIA</h3>
-                <p className="text-sm">Every Idea, Every Dream, Every Village</p>
-                <p className="text-sm font-semibold">What began as a VISION is now a WAY OF LIFE</p>
+                <h3 className="text-2xl font-bold mb-2">10 YEARS OF DIGITAL INDIA</h3>
+                <p className="text-base">Every Idea, Every Dream, Every Village</p>
+                <p className="text-base font-semibold">What began as a VISION is now a WAY OF LIFE</p>
               </div>
             </div>
           </div>
@@ -190,44 +190,44 @@ export const DivWrapperSubsection = (): JSX.Element => {
       </Card>
 
       {/* Press Release Section */}
-      <Card className="w-full border border-blue-100 rounded-lg overflow-hidden shadow-sm">
-        <div className="w-full h-12 bg-blue-600 relative flex items-center">
-          <div className="absolute left-4 bg-white rounded px-3 py-1">
-            <span className="font-medium text-blue-600 text-sm">
+      <Card className="w-full border-0 rounded-lg overflow-hidden shadow-md">
+        <div className="w-full h-16 bg-gradient-to-r from-blue-600 to-indigo-600 relative flex items-center">
+          <div className="absolute left-6 bg-white rounded-lg px-4 py-2">
+            <span className="font-bold text-blue-700 text-sm">
               Press Release
             </span>
           </div>
-          <div className="ml-40 font-medium text-white text-sm">
+          <div className="ml-48 font-semibold text-white text-base">
             Upcoming trade and commercial events in india
           </div>
         </div>
 
-        <CardContent className="flex flex-col gap-3 pt-4 pb-6 px-4">
+        <CardContent className="flex flex-col gap-4 pt-6 pb-8 px-6">
           {pressReleaseItems.map((item, index) => (
             <Card
               key={`press-release-${index}`}
-              className="w-full rounded-lg border border-blue-100 bg-blue-50"
+              className="w-full rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100"
             >
-              <CardContent className="p-4">
-                <div className="flex flex-col items-start gap-2">
-                  <div className="flex flex-wrap items-center gap-2 w-full">
-                    <div className="font-medium text-blue-600 text-sm">
+              <CardContent className="p-5">
+                <div className="flex flex-col items-start gap-3">
+                  <div className="flex flex-wrap items-center gap-3 w-full">
+                    <div className="font-bold text-blue-700 text-sm">
                       {item.date}
                     </div>
-                    <Badge className="bg-blue-500 rounded-full font-normal text-white text-xs">
+                    <Badge className="bg-blue-600 rounded-full font-semibold text-white text-xs px-3 py-1">
                       NEW
                     </Badge>
                   </div>
                   <div className="w-full">
-                    <p className="font-normal text-blue-700 text-sm leading-relaxed">
+                    <p className="font-normal text-blue-800 text-sm leading-relaxed">
                       {item.content}
                     </p>
                   </div>
-                  <div className="flex items-center gap-1 pt-1">
-                    <span className="font-normal text-blue-600 text-sm">
+                  <div className="flex items-center gap-1 pt-2">
+                    <span className="font-medium text-blue-700 text-sm hover:text-blue-800 cursor-pointer">
                       Read more
                     </span>
-                    <ArrowRightIcon className="h-4 w-4 text-blue-600" />
+                    <ArrowRightIcon className="h-4 w-4 text-blue-700" />
                   </div>
                 </div>
               </CardContent>
