@@ -24,6 +24,8 @@
                </div>
 
                <img
+   )
+ }
 -                className="ml-auto h-24 object-cover"
 +                className="ml-auto h-20 object-cover"
                  alt="Dashboard graphics"
