@@ -15,10 +15,10 @@ import { OverlapWrapperSubsection } from "./sections/OverlapWrapperSubsection";
 
 export const Box = (): JSX.Element => {
   return (
-    <div className="w-full min-h-screen bg-gray-50">
+    <div className="w-[1300px] mx-auto min-h-screen bg-gray-50">
       {/* Top navigation bar */}
       <div className="w-full shadow-[0px_2px_4px_#0000001a] bg-[linear-gradient(90deg,rgba(30,58,138,1)_0%,rgba(30,64,175,1)_50%,rgba(55,48,163,1)_100%)]">
-        <div className="max-w-7xl mx-auto flex justify-between items-center h-10 px-4">
+        <div className="w-[1186px] mx-auto flex justify-between items-center h-[57.59px] px-4">
           <div className="text-white text-xs tracking-[0.12px]">
             Sitemap | Contact Us | Feedback
           </div>
@@ -55,7 +55,7 @@ export const Box = (): JSX.Element => {
       </div>
 
       {/* Header image and section */}
-      <div className="w-full relative h-32">
+      <div className="w-[1186px] mx-auto relative h-32">
         <img
           className="w-full h-32 object-cover"
           alt="Back ground image"
@@ -65,7 +65,7 @@ export const Box = (): JSX.Element => {
       </div>
 
       {/* Main content container */}
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="w-[1186px] mx-auto px-4">
         {/* Hero Section */}
         <div className="mb-6">
           <GroupSubsection />
