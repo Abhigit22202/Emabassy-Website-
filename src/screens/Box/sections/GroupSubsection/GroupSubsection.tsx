@@ -20,15 +20,16 @@ export const GroupSubsection = (): JSX.Element => {
 
   return (
     <div className="w-full">
-      {/* Main Slider Container - Exact dimensions 1186x471 */}
-      <div className="w-[1186px] h-[471px] mx-auto overflow-hidden shadow-lg">
-        {/* Navigation Menu - Exact dimensions 1186x57.59 */}
-        <NavigationMenu className="w-[1186px] h-[57.59px] bg-[linear-gradient(90deg,rgba(30,58,138,1)_0%,rgba(30,64,175,1)_50%,rgba(67,56,202,1)_100%)]">
-          <NavigationMenuList className="flex w-full h-full">
+      {/* Main Slider Container - Full Width */}
+      <div className="w-full h-[471px] overflow-hidden shadow-lg">
+        {/* Navigation Menu - Full Width with centered content */}
+        <NavigationMenu className="w-full h-[57.59px] bg-[linear-gradient(90deg,rgba(30,58,138,1)_0%,rgba(30,64,175,1)_50%,rgba(67,56,202,1)_100%)]">
+          <div className="w-[1186px] mx-auto">
+            <NavigationMenuList className="flex w-full h-[57.59px]">
             {navItems.map((item, index) => (
               <div
                 key={index}
-                className={`inline-flex items-center gap-2 px-4 h-full ${
+                className={`inline-flex items-center gap-2 px-4 h-[57.59px] ${
                   item.hasBorder ? "border-r border-blue-500" : ""
                 }`}
               >
@@ -38,15 +39,16 @@ export const GroupSubsection = (): JSX.Element => {
               </div>
             ))}
           </NavigationMenuList>
+          </div>
         </NavigationMenu>
 
-        {/* Hero Banner - Remaining height (471 - 57.59 = 413.41px) */}
-        <div className="w-[1186px] h-[413.41px] bg-[url(/lGCKtwgvsrU3WcxwUJCY9vtYHjTPdLo19BUdm6fm.jpeg)] bg-cover bg-center relative">
+        {/* Hero Banner - Full Width with centered content */}
+        <div className="w-full h-[413.41px] bg-[url(/lGCKtwgvsrU3WcxwUJCY9vtYHjTPdLo19BUdm6fm.jpeg)] bg-cover bg-center relative">
           {/* Gradient Overlay */}
           <div className="absolute w-full h-full top-0 left-0 shadow-[0px_4px_4px_#00000040] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(30,30,30,0.64)_74%)]" />
 
           {/* Banner Content */}
-          <div className="absolute bottom-16 left-8 right-8">
+          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[1186px] px-8">
             <h1 className="font-bold text-white text-2xl mb-4">
               Embassy Officials in a Meeting
             </h1>

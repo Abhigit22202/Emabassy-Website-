@@ -15,7 +15,7 @@ import { OverlapWrapperSubsection } from "./sections/OverlapWrapperSubsection";
 
 export const Box = (): JSX.Element => {
   return (
-    <div className="w-[1300px] mx-auto min-h-screen bg-gray-50">
+    <div className="w-full min-h-screen bg-gray-50">
       {/* Top navigation bar */}
       <div className="w-full shadow-[0px_2px_4px_#0000001a] bg-[linear-gradient(90deg,rgba(30,58,138,1)_0%,rgba(30,64,175,1)_50%,rgba(55,48,163,1)_100%)]">
         <div className="w-[1186px] mx-auto flex justify-between items-center h-[57.59px] px-4">
@@ -65,7 +65,7 @@ export const Box = (): JSX.Element => {
       </div>
 
       {/* Main Slider Section - Exact dimensions 1186x471 */}
-      <div className="w-[1186px] mx-auto mb-8">
+      <div className="w-full mb-8">
         <GroupSubsection />
       </div>
 
