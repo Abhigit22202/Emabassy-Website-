@@ -174,16 +174,20 @@ export const DivWrapperSubsection = (): JSX.Element => {
         </CardContent>
       </Card>
 
-      {/* Digital India Banner */}
-      <div className="w-full h-32 bg-[url(/juGajmc1gOVBUtt5\ \(1\).jpg)] bg-cover bg-center relative rounded-lg overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/80 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h3 className="text-xl font-bold mb-2">10 YEARS OF DIGITAL INDIA</h3>
-            <p className="text-sm">Every Idea, Every Dream, Every Village</p>
-            <p className="text-sm font-semibold">What began as a VISION is now a WAY OF LIFE</p>
+      {/* Digital India Banner - Full Width */}
+      <Card className="w-full rounded-lg overflow-hidden shadow-sm">
+        <CardContent className="p-0">
+          <div className="w-full h-32 bg-[url(/juGajmc1gOVBUtt5\ \(1\).jpg)] bg-cover bg-center relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/80 flex items-center justify-center">
+              <div className="text-center text-white">
+                <h3 className="text-xl font-bold mb-2">10 YEARS OF DIGITAL INDIA</h3>
+                <p className="text-sm">Every Idea, Every Dream, Every Village</p>
+                <p className="text-sm font-semibold">What began as a VISION is now a WAY OF LIFE</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
 
       {/* Press Release Section */}
       <Card className="w-full border border-blue-100 rounded-lg overflow-hidden shadow-sm">

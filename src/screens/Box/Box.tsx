@@ -71,11 +71,15 @@ export const Box = (): JSX.Element => {
           <GroupSubsection />
         </div>
 
+        {/* MEA Performance Dashboard - Full Width */}
+        <div className="mb-6">
+          <OverlapWrapperSubsection />
+        </div>
+
         {/* Two column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left column - Main content */}
           <div className="lg:col-span-2 space-y-6">
-            <OverlapWrapperSubsection />
             <DivWrapperSubsection />
           </div>
 
