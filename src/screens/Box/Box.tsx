@@ -18,7 +18,7 @@ export const Box = (): JSX.Element => {
     <div className="w-[1300px] mx-auto min-h-screen bg-gray-50">
       {/* Top navigation bar */}
       <div className="w-full shadow-[0px_2px_4px_#0000001a] bg-[linear-gradient(90deg,rgba(30,58,138,1)_0%,rgba(30,64,175,1)_50%,rgba(55,48,163,1)_100%)]">
-        <div className="w-[1186px] mx-auto flex justify-between items-center h-[57.59px] px-4">
+        <div className="w-[1186px] mx-auto flex justify-between items-center h-[70px] px-4">
           <div className="text-white text-xs tracking-[0.12px]">
             Sitemap | Contact Us | Feedback
           </div>
@@ -67,19 +67,19 @@ export const Box = (): JSX.Element => {
       {/* Main content container */}
       <div className="w-[1186px] mx-auto px-4">
         {/* Hero Section */}
-        <div className="mb-6">
+        <div className="mb-8">
           <GroupSubsection />
         </div>
 
         {/* MEA Performance Dashboard - Full Width */}
-        <div className="mb-6">
+        <div className="mb-8">
           <OverlapWrapperSubsection />
         </div>
 
         {/* Two column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left column - Main content */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-8">
             <DivWrapperSubsection />
           </div>
 
