@@ -16,17 +16,17 @@ import { OverlapWrapperSubsection } from "./sections/OverlapWrapperSubsection";
 export const Box = (): JSX.Element => {
   return (
     <div className="w-full min-h-screen bg-white">
-      {/* Top navigation bar */}
-      <div className="w-full shadow-[0px_2px_4px_#0000001a] bg-[linear-gradient(90deg,rgba(30,58,138,1)_0%,rgba(30,64,175,1)_50%,rgba(55,48,163,1)_100%)]">
-        <div className="w-[1186px] mx-auto flex justify-between items-center h-[40px] px-4">
-          <div className="text-white text-xs tracking-[0.12px]">
+      {/* Top navigation bar - Blue gradient */}
+      <div className="w-full h-[35px] bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900 shadow-sm">
+        <div className="w-[1186px] mx-auto flex justify-between items-center h-full px-4">
+          <div className="text-white text-xs">
             Sitemap | Contact Us | Feedback
           </div>
 
           <div className="flex items-center">
             <Select defaultValue="english">
-              <SelectTrigger className="w-24 h-6 bg-white/30 border-gray-400 rounded text-xs">
-                <SelectValue placeholder="Select Language" />
+              <SelectTrigger className="w-20 h-6 bg-white/20 border-white/30 rounded text-xs text-white">
+                <SelectValue />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="english">English</SelectItem>
@@ -37,99 +37,85 @@ export const Box = (): JSX.Element => {
 
           <div className="flex items-center text-xs text-white">
             <span>Skip to main content | Screen Reader Access |</span>
-            <div className="flex items-center ml-1">
-              <div className="w-[17px] h-4 bg-white border border-solid border-black flex items-center justify-center">
-                <span className="text-black font-black text-[10px] tracking-[0.10px]">
-                  A
-                </span>
+            <div className="flex items-center ml-2">
+              <div className="w-4 h-4 bg-white border border-black flex items-center justify-center">
+                <span className="text-black font-bold text-[8px]">A</span>
               </div>
-              <div className="w-[17px] h-4 bg-black border border-solid border-[#b05416] flex items-center justify-center ml-1">
-                <span className="text-white font-black text-[10px] tracking-[0.10px]">
-                  A
-                </span>
+              <div className="w-4 h-4 bg-black border border-orange-500 flex items-center justify-center ml-1">
+                <span className="text-white font-bold text-[8px]">A</span>
               </div>
-              <span className="ml-1 text-base tracking-[0.03px]">A+</span>
+              <span className="ml-1 text-sm">A+</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Header image and section */}
-      <div className="w-full relative h-32">
-        <img
-          className="w-full h-32 object-cover"
-          alt="Back ground image"
-          src="/back_ground_image.jpg"
-        />
-        <HeaderSubsection />
-      </div>
+      {/* Header with logo and search */}
+      <HeaderSubsection />
 
-      {/* Main Slider Section - Exact dimensions 1186x471 */}
-      <div className="w-full">
-        <GroupSubsection />
-      </div>
+      {/* Main Navigation and Hero Slider */}
+      <GroupSubsection />
 
-      {/* MEA Performance Dashboard - Full Width Below Slider */}
-      <div className="w-[1186px] mx-auto py-6">
+      {/* MEA Performance Dashboard */}
+      <div className="w-[1186px] mx-auto mt-4">
         <OverlapWrapperSubsection />
       </div>
 
-      {/* Main Content Layout - Two Columns */}
-      <div className="w-[1186px] mx-auto py-6">
+      {/* Main Content Layout */}
+      <div className="w-[1186px] mx-auto mt-6">
         <div className="grid grid-cols-12 gap-6">
-          {/* Left Column - 2/3 width */}
-          <div className="col-span-8 space-y-6">
+          {/* Left Column - What's New, Albums, Digital India, Press Release */}
+          <div className="col-span-8">
             <DivWrapperSubsection />
           </div>
 
-          {/* Right Column - 1/3 width */}
+          {/* Right Column - Ambassador, Quick Services, Video Gallery, etc. */}
           <div className="col-span-4">
             <GroupWrapperSubsection />
           </div>
         </div>
       </div>
 
-      {/* Our Initiatives Section - Full Width */}
+      {/* Our Initiatives Section */}
       <div className="w-[1186px] mx-auto py-12">
         <h2 className="font-bold text-blue-900 text-2xl text-center mb-8">
           Our Initiatives
         </h2>
-
         <div className="grid grid-cols-6 gap-4 items-center justify-items-center">
           <img
             className="w-28 h-16 object-contain hover:scale-105 transition-transform duration-300"
             alt="Indian Perspectives"
-            src="/indianprespectiveslogoNov2020_10feb.jpg"
+            src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=112&h=64&fit=crop"
           />
           <img
             className="w-28 h-16 object-contain hover:scale-105 transition-transform duration-300"
-            alt="E-Visa Logo"
-            src="/logo1.png"
+            alt="E-Visa"
+            src="https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=112&h=64&fit=crop"
           />
           <img
             className="w-28 h-16 object-contain hover:scale-105 transition-transform duration-300"
             alt="Incredible India"
-            src="/ft_link_incredible_india1.jpg"
+            src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg?auto=compress&cs=tinysrgb&w=112&h=64&fit=crop"
           />
           <img
             className="w-28 h-16 object-contain hover:scale-105 transition-transform duration-300"
             alt="ITEC"
-            src="/itec_right.jpeg"
+            src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=112&h=64&fit=crop"
           />
           <img
             className="w-28 h-16 object-contain hover:scale-105 transition-transform duration-300"
-            alt="Embassy Newsletter"
-            src="/PortadaDECEMBER_2018_NEWSLETTER.jpg"
+            alt="Newsletter"
+            src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=112&h=64&fit=crop"
           />
           <img
             className="w-28 h-16 object-contain hover:scale-105 transition-transform duration-300"
             alt="Map India"
-            src="/map-india.png"
+            src="https://images.pexels.com/photos/1098515/pexels-photo-1098515.jpeg?auto=compress&cs=tinysrgb&w=112&h=64&fit=crop"
           />
         </div>
       </div>
 
-      {/* Footer section */}
+      {/* Footer */}
       <FooterSubsection />
     </div>
   );
